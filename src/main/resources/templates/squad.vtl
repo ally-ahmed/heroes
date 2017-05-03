@@ -1,0 +1,32 @@
+
+<div id="full-page">
+	<div class="landing1">
+		<h1>$squad.getName()</h1>
+		<!-- <h2>$squad.getCause()</h2> -->
+	</div>
+
+	<div id="squad-buttons" class="text-center">
+		#if($squad.Check())
+		<button class="btn3" class="btn btn-lg btn-default"><a href="/squads/$squad.getId()/heroes/new">Add New Hero</a></button>
+		#else
+		<h1>Your squad is full</h1>
+		#end
+		<button class="btn3" class="btn btn-lg btn-default"><a href="/squads">All Squads</a></button>
+	</div>
+
+
+		<ul id="movieposters">
+
+			#foreach($hero in $squad.getHeroes())
+				<li>
+					<img src="/images/01_iron_man_2.jpg" alt="Iron Man 2" />
+					<div class="movieinfo">
+						<h3>$hero.getName()</h3>
+						<a href="/heroes/$hero.getId()">More info</a>
+					</div>
+				</li>
+			#end
+		</ul>
+</div>
+
+	

@@ -1,0 +1,20 @@
+
+<div id="full-page">
+  <div class="landing1">
+    <h1>All Squads</h1>
+  </div>
+  <div class="list">
+    <ul>
+      #foreach ($squad in $squads)
+       
+        <li class="ribbon">
+        <a class="ribbon-content" href="/squads/$squad.getId()">$squad.getName()</a>
+        </li>
+      #end
+    </ul>
+  </div>
+ 
+
+
+  <button class="btn4" class="btn btn-lg btn-default"><a href="/squads/new">Add New<br>Squad</a></button>
+</div>

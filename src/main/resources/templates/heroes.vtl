@@ -1,0 +1,13 @@
+<legend>Hero List</legend>
+#if($heroes)
+	<ul class="list-group">
+	#foreach($hero in $heroes)
+		<li class="list-group-item"><a href="/heroes/$hero.getId()">$hero.getName()</a></li>
+	
+	#end	
+	</ul>
+#else
+	<p>No Heroes!</p>
+#end
+
+
